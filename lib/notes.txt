@@ -1,0 +1,13 @@
+To create splas images
+----------------------
+- import our logo in to adobe xd and export it for android
+-now go to aseet folder in your project
+-create a images folder
+-make 1.5x,2.0x,3.0x,4.0x folders
+-copy te base image to images folder
+-from exportted folder copy image to specified folder in images like following(rename all images to same name)
+-mdpi - base image
+-hdpi -1.5x
+-xhdpi = 2.0x
+-xxhdpi=3.0x
+-xxxhdpi=4.0x
