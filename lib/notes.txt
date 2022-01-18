@@ -1,5 +1,5 @@
 To create splash images
-----------------------
+----------------------------
 - import our logo in to adobe xd and export it for android
 - now go to aseet folder in your project
 - create a images folder
@@ -13,8 +13,8 @@ To create splash images
 - xxxhdpi = 4.0x
 - finally just set the  basic image in pubspec.yaml
 
-To cange splash screen color
---------------------------------
+To cange splash screen color - android
+----------------------------------------
 - in android\app\src\main\res\values 
 - create color.xml
 - paste te following inside it
@@ -34,8 +34,8 @@ To cange splash screen color
 
 
 
-To change App name
--------------------
+To change App name - android
+-------------------------------
 - in android\app\src\main\res\values 
 - create string.xml file
 - paste the following inside it
@@ -52,12 +52,41 @@ To change App name
 - android:label="@string/app_name"
 
 
-To create app icon
--------------------
+To create app icon - android
+--------------------------------
 - open the icon in adobe xd and export it for 1x or design
 - go to following link in web
 - https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=clipart&foreground.clipart=android&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(68%2C%20138%2C%20255)&crop=0&backgroundShape=circle&effects=none&name=ic_launcher
 - download the generated zip
 - inside te zip you can see te same folder as in C:\flutter Works\advanced_flutter\android\app\src\main\res
 - replace te content inside pjoect by downloaded
+
+To change App name - ios
+--------------------------------
+- go to ios\Runner
+- open info.plit
+	<key>CFBundleName</key>
+	<string>Tut App</string>
+-you can see app name below key -bundle name just change it to what ever you want    
+
+
+To change splash screen color - ios
+-------------------------------------
+- convert color to rgb
+- and divide each value with 255 and copy the code
+- go to ios\Runner\Base.lproj
+- open LaunchScreen.storyboard
+- replace value of red =1 ,green =1,blue =1 by the value got by deviding with 255
+- eg replace this line
+   <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+  by this
+   <color key="backgroundColor" red="0.9294117647" green="0.59215686274" blue="0.15686274509" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+
+
+To create app icon - ios
+--------------------------------
+- go to the following link in browser
+- https://makeappicon.com/
+- replace all image inside ios\Runner\Assets.xcassets\AppIcon.appiconset by the new one generated
+
 
