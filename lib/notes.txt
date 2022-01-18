@@ -1,13 +1,63 @@
-To create splas images
+To create splash images
 ----------------------
 - import our logo in to adobe xd and export it for android
--now go to aseet folder in your project
--create a images folder
--make 1.5x,2.0x,3.0x,4.0x folders
--copy te base image to images folder
--from exportted folder copy image to specified folder in images like following(rename all images to same name)
--mdpi - base image
--hdpi -1.5x
--xhdpi = 2.0x
--xxhdpi=3.0x
--xxxhdpi=4.0x
+- now go to aseet folder in your project
+- create a images folder
+- make 1.5x,2.0x,3.0x,4.0x folders
+- copy te base image to images folder
+- from exportted folder copy image to specified folder in images like following(rename all images to same name)
+- mdpi  = base image
+- hdpi  = 1.5x
+- xhdpi  = 2.0x
+- xxhdpi = 3.0x
+- xxxhdpi = 4.0x
+- finally just set the  basic image in pubspec.yaml
+
+To cange splash screen color
+--------------------------------
+- in android\app\src\main\res\values 
+- create color.xml
+- paste te following inside it
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name ="primary">#ED9728</color>
+</resources>
+
+- change the color code as you prefer(#ED9728)
+- then go to android\app\src\main\res\drawable and to android\app\src\main\res\drawable-v21
+- open launch_background.xml in bot folder
+- change the line from <item android:drawable="@android:color/white" /> this to the following
+
+- <item android:drawable="@color/primary" />
+
+
+
+To change App name
+-------------------
+- in android\app\src\main\res\values 
+- create string.xml file
+- paste the following inside it
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name ="app_name">Tut App</string>
+</resources>
+
+- change the name as you prefer(Tut App)
+- then go to android\app\src\main
+- open AndroidManifest.xml
+- change the line from android:label="the name you given before"  to following
+- android:label="@string/app_name"
+
+
+To create app icon
+-------------------
+- open the icon in adobe xd and export it for 1x or design
+- go to following link in web
+- https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=clipart&foreground.clipart=android&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(68%2C%20138%2C%20255)&crop=0&backgroundShape=circle&effects=none&name=ic_launcher
+- download the generated zip
+- inside te zip you can see te same folder as in C:\flutter Works\advanced_flutter\android\app\src\main\res
+- replace te content inside pjoect by downloaded
+
